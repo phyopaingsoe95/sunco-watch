@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SU&CO | Premium Watch Gallery</title>
+    <meta name="description" content="Explore the premium, hand-crafted watch collections from SU&CO. Since 2017, bringing sweet moments like never before. White & Red Luxury Edition.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css?v=1.1">
+</head>
+<body>
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="logo-link" id="nav-logo">
+                <div class="logo-wrapper">
+                    <img src="assets/logo.png" alt="SU&CO Logo" class="brand-logo">
+                </div>
+            </a>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#customizer" class="nav-link">Customizer</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#booking" class="nav-link">Boutique</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#booking" class="btn btn-outline nav-btn">Book Viewing</a>
+                <button class="mobile-nav-toggle" aria-label="Toggle menu" id="menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg-accent"></div>
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span> EST. 2017 • RED EDITION
+                    </div>
+                    <h1 class="hero-title">
+                        Chronicles of <span class="text-gradient">Precision</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Crafting signature luxury timepieces that encapsulate your sweetest moments. Designed with passion, engineered for life.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#gallery" class="btn btn-primary">Explore Gallery</a>
+                        <a href="#customizer" class="btn btn-secondary">Tailor Your Watch</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">2017</span>
+                            <span class="stat-label">Inception</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">10k+</span>
+                            <span class="stat-label">Owners</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">150+</span>
+                            <span class="stat-label">Bespoke Builds</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="watch-display-card">
+                        <div class="watch-halo"></div>
+                        <img src="assets/watch_hero.png" alt="SU&CO Hero Watch" class="hero-watch-img" id="hero-watch">
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#about" class="scroll-down" aria-label="Scroll Down">
+                <span class="scroll-text">Discover More</span>
+                <i class="fa-solid fa-arrow-down-long scroll-icon"></i>
+            </a>
+        </section>
+
+        <!-- Brand Story Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-images">
+                        <div class="about-img-container main-about-img">
+                            <img src="assets/watch_classic.png" alt="SU&CO Classic Craftsmanship" class="about-photo">
+                        </div>
+                        <div class="about-img-container secondary-about-img">
+                            <img src="assets/watch_sport.png" alt="SU&CO Sport Mechanics" class="about-photo">
+                        </div>
+                    </div>
+                    
+                    <div class="about-details">
+                        <h2 class="section-title-sub">Our Story</h2>
+                        <h3 class="section-title">Sweet Moments <br>Like <span class="text-gradient">Never Before</span></h3>
+                        <p class="about-text">
+                            At SU&CO, we believe a watch is more than an instrument of time; it is a vault for your memories. Established in 2017, we have dedicated ourselves to merging high-end horology with modern aesthetics, resulting in distinct masterpieces featuring our signature white and red design motif.
+                        </p>
+                        
+                        <div class="craft-features">
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fa-solid fa-gears"></i></div>
+                                <div class="feature-info">
+                                    <h4>Automatic Caliber</h4>
+                                    <p>Driven by premium automatic movement with up to 48-hour power reserve.</p>
+                                </div>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fa-solid fa-gem"></i></div>
+                                <div class="feature-info">
+                                    <h4>Sapphire Crystal</h4>
+                                    <p>Scratch-proof dual dome sapphire glass offering immaculate transparency.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Watch Customizer Section -->
+        <section id="customizer" class="customizer-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title-sub">Bespoke Experience</h2>
+                    <h3 class="section-title">Configure Your <span class="text-gradient">SU&CO</span></h3>
+                    <p class="section-desc">Create your own expression of luxury. Personalize your timepiece's strap, dial, and secondary accents in real-time.</p>
+                </div>
+
+                <div class="customizer-grid">
+                    <!-- Left: Interactive Watch Preview -->
+                    <div class="customizer-preview">
+                        <div class="preview-base">
+                            <div class="glow-effect"></div>
+                            <!-- Layered Watch Image components for customization -->
+                            <img src="assets/watch_hero.png" alt="Custom Watch Body" class="custom-watch-base" id="custom-watch-img">
+                        </div>
+                    </div>
+
+                    <!-- Right: Configuration Panel -->
+                    <div class="customizer-panel">
+                        <h4 class="panel-heading">Specifications</h4>
+                        
+                        <!-- Watch Model Selector -->
+                        <div class="config-group">
+                            <label class="config-label">Base Model</label>
+                            <div class="model-options">
+                                <button class="model-btn active" data-model="hero" data-desc="The ultimate hybrid between sporty durability and dress elegance. Crimson dial face and stainless casing.">Red Sovereign</button>
+                                <button class="model-btn" data-model="classic" data-desc="A classic chronograph featuring detailed subdials, stopwatch buttons, and full stainless steel bracelet.">Chronograph Classic</button>
+                                <button class="model-btn" data-model="sport" data-desc="Sport active design. Matte black titanium bezel with an ultra-durable crimson rubber strap.">Vulcan Sport</button>
+                                <button class="model-btn" data-model="executive" data-desc="Elegant rose gold case, clean enamel white dial, and a premium black leather strap.">Rose Gold Executive</button>
+                                <button class="model-btn" data-model="minimalist" data-desc="Ultra-thin case, clean white dial with a single red second hand, paired with a silver mesh strap.">Monochrome Minimal</button>
+                            </div>
+                        </div>
+
+                        <!-- Info Area updated dynamically -->
+                        <div class="model-description-card">
+                            <p id="model-desc">The ultimate hybrid between sporty durability and dress elegance. Crimson dial face and stainless casing.</p>
+                        </div>
+
+                        <!-- Strap Type Selector (Updates background and preview classes) -->
+                        <div class="config-group">
+                            <label class="config-label">Strap Material</label>
+                            <div class="strap-options">
+                                <button class="strap-btn active" data-strap="steel">Oyster Steel</button>
+                                <button class="strap-btn" data-strap="leather">Crocodile Leather</button>
+                                <button class="strap-btn" data-strap="rubber">Sports Rubber</button>
+                                <button class="strap-btn" data-strap="mesh">Milanese Mesh</button>
+                            </div>
+                        </div>
+
+                        <!-- Bezel Accent (CSS Filters or small visual adjustments) -->
+                        <div class="config-group">
+                            <label class="config-label">Dial Highlights</label>
+                            <div class="accent-colors">
+                                <div class="color-dot active" data-accent="crimson" style="background-color: var(--primary-red);" title="Crimson Red"></div>
+                                <div class="color-dot" data-accent="silver" style="background-color: #E2E8F0;" title="Brushed Silver"></div>
+                                <div class="color-dot" data-accent="charcoal" style="background-color: #2D3748;" title="Carbon Black"></div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="config-actions">
+                            <button class="btn btn-primary btn-full" id="inquire-config-btn">Inquire This Configuration</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Watch Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <div class="section-header flex-header">
+                    <div>
+                        <h2 class="section-title-sub">The Gallery</h2>
+                        <h3 class="section-title">SU&CO <span class="text-gradient">Collections</span></h3>
+                    </div>
+                    <!-- Gallery Filter Categories -->
+                    <div class="gallery-filter-wrapper">
+                        <div class="filter-row">
+                            <span class="filter-row-label">Brand</span>
+                            <div class="brand-filters">
+                                <button class="brand-filter-btn active" data-brand="all">All Brands</button>
+                                <button class="brand-filter-btn" data-brand="suco">SU&CO</button>
+                                <button class="brand-filter-btn" data-brand="saga">SAGA</button>
+                                <button class="brand-filter-btn" data-brand="mathey-tissot">Mathey Tissot</button>
+                                <button class="brand-filter-btn" data-brand="maserati">Maserati</button>
+                            </div>
+                        </div>
+                        <div class="filter-row">
+                            <span class="filter-row-label">Style</span>
+                            <div class="gallery-filters">
+                                <button class="filter-btn active" data-filter="all">All Styles</button>
+                                <button class="filter-btn" data-filter="chronograph">Chronograph</button>
+                                <button class="filter-btn" data-filter="executive">Executive</button>
+                                <button class="filter-btn" data-filter="sport">Sport</button>
+                                <button class="filter-btn" data-filter="minimalist">Minimalist</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search and Stats bar -->
+                <div class="gallery-toolbar">
+                    <div class="search-wrapper">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" id="gallery-search" placeholder="Search models, brands, straps, movements...">
+                    </div>
+                    <div class="gallery-count">
+                        Showing <span id="displayed-count">5</span> timepieces
+                    </div>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="gallery-grid" id="gallery-grid">
+                    <!-- Cards will be dynamically generated by app.js for better flexibility, pagination/filtering -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking / Boutique Section -->
+        <section id="booking" class="booking-section">
+            <div class="container">
+                <div class="booking-card">
+                    <div class="booking-grid">
+                        <div class="booking-info">
+                            <h3 class="booking-title">Visit Our Boutique</h3>
+                            <p class="booking-text">
+                                Experience the weight, the craftsmanship, and the beauty of SU&CO watches in person. Book an exclusive private viewing at our showroom.
+                            </p>
+                            
+                            <div class="contact-details">
+                                <div class="contact-item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>74 Luxury Avenue, Suite 10, Red District</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <span>+1 (800) 555-SUCO</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span>concierge@suco-watch.com</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="booking-form-wrapper">
+                            <form id="boutique-form" class="booking-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="booking-name">Full Name</label>
+                                        <input type="text" id="booking-name" required placeholder="John Doe">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="booking-email">Email Address</label>
+                                        <input type="email" id="booking-email" required placeholder="john@example.com">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="booking-date">Preferred Date</label>
+                                        <input type="date" id="booking-date" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="booking-collection">Interested Collection</label>
+                                        <select id="booking-collection">
+                                            <option value="all">Any / General Viewing</option>
+                                            <option value="sovereign">SU&CO Red Sovereign</option>
+                                            <option value="classic">SU&CO Chronograph Classic</option>
+                                            <option value="sport">SU&CO Vulcan Sport</option>
+                                            <option value="executive">SU&CO Executive Collection</option>
+                                            <option value="minimalist">SU&CO Minimalist Selection</option>
+                                            <option value="saga">SAGA Space Jewelry Collection</option>
+                                            <option value="mathey-tissot">Mathey Tissot Swiss Heritage</option>
+                                            <option value="maserati">Maserati Racing Chrono</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="booking-message">Special Notes (Optional)</label>
+                                    <textarea id="booking-message" rows="3" placeholder="Let us know if you require any specific adjustments..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-full">Schedule Private Appointment</button>
+                            </form>
+                            <!-- Form Success State -->
+                            <div class="form-success" id="form-success-msg">
+                                <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                                <h4>Appointment Requested</h4>
+                                <p>Thank you for contacting SU&CO. Our concierge will call or email you within 24 hours to confirm your private viewing.</p>
+                                <button class="btn btn-outline" id="reset-form-btn">New Reservation</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Product Detail Modal (Populated dynamically) -->
+    <div class="modal" id="product-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-grid">
+                <div class="modal-image-panel">
+                    <div class="modal-watch-glow"></div>
+                    <img src="" alt="Watch Image" class="modal-watch-img" id="modal-img">
+                </div>
+                
+                <div class="modal-details-panel">
+                    <div class="modal-header">
+                        <span class="modal-badge" id="modal-badge">COLLECTION</span>
+                        <h2 class="modal-title" id="modal-title">Watch Model</h2>
+                        <div class="modal-price" id="modal-price">$4,500</div>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <p class="modal-description" id="modal-desc-text">Detail description goes here.</p>
+                        
+                        <h4 class="specs-heading">Technical Specifications</h4>
+                        <table class="specs-table">
+                            <tr>
+                                <td>Case Size</td>
+                                <td id="spec-case">41 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Dial Color</td>
+                                <td id="spec-dial">Crimson Red</td>
+                            </tr>
+                            <tr>
+                                <td>Movement</td>
+                                <td id="spec-movement">Swiss Automatic</td>
+                            </tr>
+                            <tr>
+                                <td>Glass Type</td>
+                                <td id="spec-glass">Sapphire Crystal</td>
+                            </tr>
+                            <tr>
+                                <td>Strap Type</td>
+                                <td id="spec-strap">Oyster Steel</td>
+                            </tr>
+                            <tr>
+                                <td>Water Resist</td>
+                                <td id="spec-water">10 ATM (100m)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <button class="btn btn-primary" id="modal-order-btn">Request Inquiry</button>
+                        <button class="btn btn-secondary" id="modal-share-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="SU&CO Logo" class="footer-logo">
+                    <p class="footer-tagline">Sweet moments like never before.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-grid">
+                    <div class="footer-link-group">
+                        <h5>Collections</h5>
+                        <ul>
+                            <li><a href="#gallery">Red Sovereign</a></li>
+                            <li><a href="#gallery">Chronograph Series</a></li>
+                            <li><a href="#gallery">Vulcan Sports</a></li>
+                            <li><a href="#gallery">Gold Executive</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-group">
+                        <h5>Services</h5>
+                        <ul>
+                            <li><a href="#booking">Private Viewings</a></li>
+                            <li><a href="#customizer">Custom Orders</a></li>
+                            <li><a href="#">Servicing & Care</a></li>
+                            <li><a href="#">Warranty Registry</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-group">
+                        <h5>About Us</h5>
+                        <ul>
+                            <li><a href="#about">Our Story</a></li>
+                            <li><a href="#">Heritage since 2017</a></li>
+                            <li><a href="#">Boutique Locations</a></li>
+                            <li><a href="#">Press Kit</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2026 SU&CO Watchmaking Co. All rights reserved.
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- App Logic JS -->
+    <script src="app.js?v=1.1"></script>
+</body>
+</html>
