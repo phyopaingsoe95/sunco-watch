@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SU&CO | Premium Watch Gallery</title>
-    <meta name="description" content="Explore the premium, hand-crafted watch collections from SU&CO. Since 2017, bringing sweet moments like never before. White & Red Luxury Edition.">
+    <meta name="description"
+        content="Explore the premium, hand-crafted watch collections from SU&CO. Since 2017, bringing sweet moments like never before. White & Red Luxury Edition.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css?v=1.1">
 </head>
+
 <body>
 
     <!-- Scroll Progress Indicator -->
@@ -27,19 +32,23 @@
                     <img src="assets/logo.png" alt="SU&CO Logo" class="brand-logo">
                 </div>
             </a>
-            
+
             <nav class="nav-menu">
                 <ul>
                     <li><a href="#hero" class="nav-link active">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#customizer" class="nav-link">Customizer</a></li>
                     <li><a href="#gallery" class="nav-link">Gallery</a></li>
                     <li><a href="#booking" class="nav-link">Boutique</a></li>
+                    <li><a href="#app-inquiry" class="nav-link">App</a></li>
                 </ul>
             </nav>
 
             <div class="header-actions">
-                <a href="#booking" class="btn btn-outline nav-btn">Book Viewing</a>
+                <a href="#app-inquiry" class="btn btn-outline nav-btn"
+                    style="display: flex; align-items: center; gap: 8px; padding: 8px 20px;">
+                    <img src="assets/app_icon.png" alt="24 SevenS" style="height: 20px; border-radius: 4px;">
+                    <span style="font-weight: 700;">24 SevenS Inquiry</span>
+                </a>
                 <button class="mobile-nav-toggle" aria-label="Toggle menu" id="menu-toggle">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -51,7 +60,7 @@
 
     <!-- Main Content Container -->
     <main>
-        
+
         <!-- Hero Section -->
         <section id="hero" class="hero-section">
             <div class="hero-bg-accent"></div>
@@ -64,11 +73,11 @@
                         Chronicles of <span class="text-gradient">Precision</span>
                     </h1>
                     <p class="hero-subtitle">
-                        Crafting signature luxury timepieces that encapsulate your sweetest moments. Designed with passion, engineered for life.
+                        Crafting signature luxury timepieces that encapsulate your sweetest moments. Designed with
+                        passion, engineered for life.
                     </p>
                     <div class="hero-ctas">
                         <a href="#gallery" class="btn btn-primary">Explore Gallery</a>
-                        <a href="#customizer" class="btn btn-secondary">Tailor Your Watch</a>
                     </div>
                     <div class="hero-stats">
                         <div class="stat-item">
@@ -87,15 +96,15 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="hero-visual">
                     <div class="watch-display-card">
                         <div class="watch-halo"></div>
-                        <img src="assets/watch_hero.png" alt="SU&CO Hero Watch" class="hero-watch-img" id="hero-watch">
+                        <img src="assets/watch_hero.jpg" alt="SU&CO Hero Watch" class="hero-watch-img" id="hero-watch">
                     </div>
                 </div>
             </div>
-            
+
             <a href="#about" class="scroll-down" aria-label="Scroll Down">
                 <span class="scroll-text">Discover More</span>
                 <i class="fa-solid fa-arrow-down-long scroll-icon"></i>
@@ -114,14 +123,18 @@
                             <img src="assets/watch_sport.png" alt="SU&CO Sport Mechanics" class="about-photo">
                         </div>
                     </div>
-                    
+
                     <div class="about-details">
                         <h2 class="section-title-sub">Our Story</h2>
-                        <h3 class="section-title">Sweet Moments <br>Like <span class="text-gradient">Never Before</span></h3>
+                        <h3 class="section-title">Sweet Moments <br>Like <span class="text-gradient">Never Before</span>
+                        </h3>
                         <p class="about-text">
-                            At SU&CO, we believe a watch is more than an instrument of time; it is a vault for your memories. Established in 2017, we have dedicated ourselves to merging high-end horology with modern aesthetics, resulting in distinct masterpieces featuring our signature white and red design motif.
+                            At SU&CO, we believe a watch is more than an instrument of time; it is a vault for your
+                            memories. Established in 2017, we have dedicated ourselves to merging high-end horology with
+                            modern aesthetics, resulting in distinct masterpieces featuring our signature white and red
+                            design motif.
                         </p>
-                        
+
                         <div class="craft-features">
                             <div class="feature-card">
                                 <div class="feature-icon"><i class="fa-solid fa-gears"></i></div>
@@ -143,75 +156,7 @@
             </div>
         </section>
 
-        <!-- Watch Customizer Section -->
-        <section id="customizer" class="customizer-section">
-            <div class="container">
-                <div class="section-header text-center">
-                    <h2 class="section-title-sub">Bespoke Experience</h2>
-                    <h3 class="section-title">Configure Your <span class="text-gradient">SU&CO</span></h3>
-                    <p class="section-desc">Create your own expression of luxury. Personalize your timepiece's strap, dial, and secondary accents in real-time.</p>
-                </div>
 
-                <div class="customizer-grid">
-                    <!-- Left: Interactive Watch Preview -->
-                    <div class="customizer-preview">
-                        <div class="preview-base">
-                            <div class="glow-effect"></div>
-                            <!-- Layered Watch Image components for customization -->
-                            <img src="assets/watch_hero.png" alt="Custom Watch Body" class="custom-watch-base" id="custom-watch-img">
-                        </div>
-                    </div>
-
-                    <!-- Right: Configuration Panel -->
-                    <div class="customizer-panel">
-                        <h4 class="panel-heading">Specifications</h4>
-                        
-                        <!-- Watch Model Selector -->
-                        <div class="config-group">
-                            <label class="config-label">Base Model</label>
-                            <div class="model-options">
-                                <button class="model-btn active" data-model="hero" data-desc="The ultimate hybrid between sporty durability and dress elegance. Crimson dial face and stainless casing.">Red Sovereign</button>
-                                <button class="model-btn" data-model="classic" data-desc="A classic chronograph featuring detailed subdials, stopwatch buttons, and full stainless steel bracelet.">Chronograph Classic</button>
-                                <button class="model-btn" data-model="sport" data-desc="Sport active design. Matte black titanium bezel with an ultra-durable crimson rubber strap.">Vulcan Sport</button>
-                                <button class="model-btn" data-model="executive" data-desc="Elegant rose gold case, clean enamel white dial, and a premium black leather strap.">Rose Gold Executive</button>
-                                <button class="model-btn" data-model="minimalist" data-desc="Ultra-thin case, clean white dial with a single red second hand, paired with a silver mesh strap.">Monochrome Minimal</button>
-                            </div>
-                        </div>
-
-                        <!-- Info Area updated dynamically -->
-                        <div class="model-description-card">
-                            <p id="model-desc">The ultimate hybrid between sporty durability and dress elegance. Crimson dial face and stainless casing.</p>
-                        </div>
-
-                        <!-- Strap Type Selector (Updates background and preview classes) -->
-                        <div class="config-group">
-                            <label class="config-label">Strap Material</label>
-                            <div class="strap-options">
-                                <button class="strap-btn active" data-strap="steel">Oyster Steel</button>
-                                <button class="strap-btn" data-strap="leather">Crocodile Leather</button>
-                                <button class="strap-btn" data-strap="rubber">Sports Rubber</button>
-                                <button class="strap-btn" data-strap="mesh">Milanese Mesh</button>
-                            </div>
-                        </div>
-
-                        <!-- Bezel Accent (CSS Filters or small visual adjustments) -->
-                        <div class="config-group">
-                            <label class="config-label">Dial Highlights</label>
-                            <div class="accent-colors">
-                                <div class="color-dot active" data-accent="crimson" style="background-color: var(--primary-red);" title="Crimson Red"></div>
-                                <div class="color-dot" data-accent="silver" style="background-color: #E2E8F0;" title="Brushed Silver"></div>
-                                <div class="color-dot" data-accent="charcoal" style="background-color: #2D3748;" title="Carbon Black"></div>
-                            </div>
-                        </div>
-
-                        <!-- Action Buttons -->
-                        <div class="config-actions">
-                            <button class="btn btn-primary btn-full" id="inquire-config-btn">Inquire This Configuration</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Watch Gallery Section -->
         <section id="gallery" class="gallery-section">
@@ -250,7 +195,8 @@
                 <div class="gallery-toolbar">
                     <div class="search-wrapper">
                         <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                        <input type="text" id="gallery-search" placeholder="Search models, brands, straps, movements...">
+                        <input type="text" id="gallery-search"
+                            placeholder="Search models, brands, straps, movements...">
                     </div>
                     <div class="gallery-count">
                         Showing <span id="displayed-count">5</span> timepieces
@@ -272,9 +218,10 @@
                         <div class="booking-info">
                             <h3 class="booking-title">Visit Our Boutique</h3>
                             <p class="booking-text">
-                                Experience the weight, the craftsmanship, and the beauty of SU&CO watches in person. Book an exclusive private viewing at our showroom.
+                                Experience the weight, the craftsmanship, and the beauty of SU&CO watches in person.
+                                Book an exclusive private viewing at our showroom.
                             </p>
-                            
+
                             <div class="contact-details">
                                 <div class="contact-item">
                                     <i class="fa-solid fa-location-dot"></i>
@@ -290,7 +237,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="booking-form-wrapper">
                             <form id="boutique-form" class="booking-form">
                                 <div class="form-row">
@@ -325,18 +272,67 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="booking-message">Special Notes (Optional)</label>
-                                    <textarea id="booking-message" rows="3" placeholder="Let us know if you require any specific adjustments..."></textarea>
+                                    <textarea id="booking-message" rows="3"
+                                        placeholder="Let us know if you require any specific adjustments..."></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-full">Schedule Private Appointment</button>
+                                <button type="submit" class="btn btn-primary btn-full">Schedule Private
+                                    Appointment</button>
                             </form>
                             <!-- Form Success State -->
                             <div class="form-success" id="form-success-msg">
                                 <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
                                 <h4>Appointment Requested</h4>
-                                <p>Thank you for contacting SU&CO. Our concierge will call or email you within 24 hours to confirm your private viewing.</p>
+                                <p>Thank you for contacting SU&CO. Our concierge will call or email you within 24 hours
+                                    to confirm your private viewing.</p>
                                 <button class="btn btn-outline" id="reset-form-btn">New Reservation</button>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Inquiry Section -->
+        <section id="app-inquiry" class="app-section"
+            style="background-color: var(--black); color: var(--white); padding: 80px 0; text-align: center;">
+            <div class="container">
+                <div class="app-content" style="max-width: 600px; margin: 0 auto;">
+                    <img src="assets/app_icon.png" alt="24 SevenS App Icon"
+                        style="display: block; margin: 0 auto 24px auto; width: 120px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    <h2 class="section-title-sub" style="color: var(--primary-red);">Mobile Experience</h2>
+                    <h3 class="section-title">Get <span class="text-gradient">24
+                            SevenS</span></h3>
+                    <p class="section-desc" style="color: var(--text-gray); margin-bottom: 32px;">Discover our exclusive
+                        collections, book boutique appointments, and explore luxury watches directly from your mobile
+                        device.</p>
+
+                    <div class="app-links" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                        <a href="https://apps.apple.com/us/app/24-sevens/id6749201006" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-primary"
+                            style="display: flex; align-items: center; gap: 10px; padding: 12px 24px;">
+                            <i class="fa-brands fa-apple" style="font-size: 28px;"></i>
+                            <div style="text-align: left; line-height: 1.2;">
+                                <span
+                                    style="font-size: 10px; display: block; text-transform: none; letter-spacing: 0;">Download
+                                    on the</span>
+                                <span
+                                    style="font-size: 16px; font-weight: 600; text-transform: none; letter-spacing: 0;">App
+                                    Store</span>
+                            </div>
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.chrisminkhant.TwentyFourSeven&hl=en"
+                            target="_blank" rel="noopener noreferrer" class="btn btn-secondary"
+                            style="display: flex; align-items: center; gap: 10px; padding: 12px 24px;">
+                            <i class="fa-brands fa-google-play" style="font-size: 24px;"></i>
+                            <div style="text-align: left; line-height: 1.2;">
+                                <span
+                                    style="font-size: 10px; display: block; text-transform: none; letter-spacing: 0;">GET
+                                    IT ON</span>
+                                <span
+                                    style="font-size: 16px; font-weight: 600; text-transform: none; letter-spacing: 0;">Google
+                                    Play</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -348,23 +344,23 @@
     <div class="modal" id="product-modal">
         <div class="modal-backdrop"></div>
         <div class="modal-content">
-            <button class="modal-close" aria-label="Close modal" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <button class="modal-close" aria-label="Close modal" id="modal-close"><i
+                    class="fa-solid fa-xmark"></i></button>
             <div class="modal-grid">
                 <div class="modal-image-panel">
                     <div class="modal-watch-glow"></div>
                     <img src="" alt="Watch Image" class="modal-watch-img" id="modal-img">
                 </div>
-                
+
                 <div class="modal-details-panel">
                     <div class="modal-header">
                         <span class="modal-badge" id="modal-badge">COLLECTION</span>
                         <h2 class="modal-title" id="modal-title">Watch Model</h2>
-                        <div class="modal-price" id="modal-price">$4,500</div>
                     </div>
-                    
+
                     <div class="modal-body">
                         <p class="modal-description" id="modal-desc-text">Detail description goes here.</p>
-                        
+
                         <h4 class="specs-heading">Technical Specifications</h4>
                         <table class="specs-table">
                             <tr>
@@ -393,10 +389,11 @@
                             </tr>
                         </table>
                     </div>
-                    
+
                     <div class="modal-actions">
                         <button class="btn btn-primary" id="modal-order-btn">Request Inquiry</button>
-                        <button class="btn btn-secondary" id="modal-share-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                        <button class="btn btn-secondary" id="modal-share-btn"><i class="fa-solid fa-share-nodes"></i>
+                            Share</button>
                     </div>
                 </div>
             </div>
@@ -420,7 +417,7 @@
                         <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-links-grid">
                     <div class="footer-link-group">
                         <h5>Collections</h5>
@@ -435,7 +432,6 @@
                         <h5>Services</h5>
                         <ul>
                             <li><a href="#booking">Private Viewings</a></li>
-                            <li><a href="#customizer">Custom Orders</a></li>
                             <li><a href="#">Servicing & Care</a></li>
                             <li><a href="#">Warranty Registry</a></li>
                         </ul>
@@ -451,7 +447,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <div class="copyright">
                     &copy; 2026 SU&CO Watchmaking Co. All rights reserved.
@@ -468,4 +464,5 @@
     <!-- App Logic JS -->
     <script src="app.js?v=1.1"></script>
 </body>
+
 </html>
