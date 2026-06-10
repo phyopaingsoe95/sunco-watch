@@ -47,7 +47,7 @@ const WATCH_DATABASE = [
         subtitle: 'Active Collection',
         brand: 'suco',
         category: 'sport',
-        image: 'assets/watch_sport.png',
+        image: 'assets/Mathey_Evasion.png',
         badge: 'SU&CO',
         description: 'Rugged performance meet modern lines. Built inside a lightweight, matte black titanium case with a textured carbon dial, glowing red hands, and a double-injected vulcanized rubber strap.',
         specs: {
@@ -209,7 +209,7 @@ const WATCH_DATABASE = [
         subtitle: 'Swiss Sport Series',
         brand: 'mathey-tissot',
         category: 'sport',
-        image: 'assets/watch_sport.png',
+        image: 'assets/Mathey_Evasion.png',
         badge: 'Mathey Tissot',
         description: 'Swiss heritage meets modern athleticism. Lightweight titanium case, anthracite tachymeter bezel, and a perforated rubber strap engineered for ventilation during long pursuits.',
         specs: {
@@ -256,7 +256,7 @@ const MODEL_MAPPING = {
         collectionValue: 'classic'
     },
     sport: {
-        img: 'assets/watch_sport.png',
+        img: 'assets/Mathey_Evasion.png',
         desc: 'Sport active design. Matte black titanium bezel with an ultra-durable crimson rubber strap.',
         collectionValue: 'sport'
     },
@@ -302,7 +302,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const specGlass = document.getElementById('spec-glass');
     const specStrap = document.getElementById('spec-strap');
     const specWater = document.getElementById('spec-water');
-    const modalOrderBtn = document.getElementById('modal-order-btn');
     const modalShareBtn = document.getElementById('modal-share-btn');
     const backdrop = document.querySelector('.modal-backdrop');
 
@@ -405,9 +404,6 @@ document.addEventListener('DOMContentLoaded', () => {
         specStrap.textContent = watch.specs.strap;
         specWater.textContent = watch.specs.water;
 
-        // Store watch name on inquiry button
-        modalOrderBtn.setAttribute('data-watch', watch.id);
-
         modal.classList.add('active');
         document.body.style.overflow = 'hidden'; // Lock background scroll
     }
@@ -420,32 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (modalClose) modalClose.addEventListener('click', closeModal);
     if (backdrop) backdrop.addEventListener('click', closeModal);
 
-    if (modalOrderBtn) {
-        modalOrderBtn.addEventListener('click', () => {
-            const watchId = modalOrderBtn.getAttribute('data-watch');
-            const watch = WATCH_DATABASE.find(w => w.id === watchId);
 
-            closeModal();
-
-            // Set collection in dropdown
-            if (bookingCollection) {
-                const baseId = watchId.replace('-minimal', 'minimalist').split('-')[0];
-                const mapped = MODEL_MAPPING[baseId] || MODEL_MAPPING[watchId];
-                if (mapped) {
-                    bookingCollection.value = mapped.collectionValue;
-                } else {
-                    if (watchId.startsWith('saga')) bookingCollection.value = 'saga';
-                    else if (watchId === 'mathey-tissot-martin') bookingCollection.value = 'mathey-tissot-martin';
-                    else if (watchId.startsWith('mathey-tissot')) bookingCollection.value = 'mathey-tissot';
-                    else if (watchId.startsWith('maserati')) bookingCollection.value = 'maserati';
-                }
-            }
-
-            // Smooth scroll to boutique section
-            document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
-            showToast(`Selected ${watch.title} for appointment inquiry.`);
-        });
-    }
 
     if (modalShareBtn) {
         modalShareBtn.addEventListener('click', () => {
@@ -515,8 +486,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="card-info">
                     <h4 class="card-title">${watch.title}</h4>
                     <p class="card-desc">${watch.description}</p>
-                    <div class="card-footer">
-                        <a href="#booking" class="card-action-link" data-id="${watch.id}">Inquire <i class="fa-solid fa-arrow-right"></i></a>
+                    <div class="card-footer" style="display: flex; gap: 12px; align-items: center; justify-content: flex-start;">
+                        <a href="tel:0966688864" style="color: #10b981; font-size: 16px; text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1"><i class="fa-solid fa-phone"></i></a>
+                        <a href="https://m.me/168356627035258" target="_blank" style="color: #0084ff; font-size: 16px; text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1"><i class="fa-brands fa-facebook-messenger"></i></a>
                     </div>
                 </div>
             `;
@@ -531,33 +503,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Add Direct Inquire triggers
-        document.querySelectorAll('.card-action-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const id = link.getAttribute('data-id');
-                const watch = WATCH_DATABASE.find(w => w.id === id);
 
-                // Set collection dropdown
-                if (bookingCollection) {
-                    // Try to match id prefix
-                    const baseId = id.replace('-minimal', 'minimalist').split('-')[0];
-                    const mapped = MODEL_MAPPING[baseId] || MODEL_MAPPING[id];
-                    if (mapped) {
-                        bookingCollection.value = mapped.collectionValue;
-                    } else {
-                        // Fallback for brand watch direct matches
-                        if (id.startsWith('saga')) bookingCollection.value = 'saga';
-                        else if (id === 'mathey-tissot-martin') bookingCollection.value = 'mathey-tissot-martin';
-                        else if (id.startsWith('mathey-tissot')) bookingCollection.value = 'mathey-tissot';
-                        else if (id.startsWith('maserati')) bookingCollection.value = 'maserati';
-                    }
-                }
-
-                document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
-                showToast(`Selected ${watch.title} for appointment inquiry.`);
-            });
-        });
     }
 
     // Set up Brand filter click events
