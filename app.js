@@ -83,7 +83,7 @@ const WATCH_DATABASE = [
         subtitle: 'Minimalist Series',
         brand: 'suco',
         category: 'minimalist',
-        image: 'assets/watch_hero.jpg', // Fallback or minimalist image
+        image: 'assets/watch_minimalist.png',
         badge: 'SU&CO',
         description: 'Understated beauty in its purest form. Features an ultra-thin stainless steel casing, silver Milanese mesh strap, and a clean white face punctuated by a single red sweep-second hand.',
         specs: {
@@ -132,6 +132,24 @@ const WATCH_DATABASE = [
         }
     },
     {
+        id: 'mathey-tissot-martin',
+        title: 'Mathey Tissot Martin',
+        subtitle: 'Swiss Heritage Series',
+        brand: 'mathey-tissot',
+        category: 'executive',
+        image: 'assets/Mathey.jpg',
+        badge: 'Mathey Tissot',
+        description: 'A dress-watch interpretation of Mathey Tissot heritage. Slim polished case, champagne gold dial with applied indices, and a supple hand-stitched leather strap for understated everyday wear.',
+        specs: {
+            case: '39 mm',
+            dial: 'Champagne Gold',
+            movement: 'Swiss Quartz ETA',
+            glass: 'Magnified Sapphire Crystal',
+            strap: 'Hand-Stitched Leather',
+            water: '3 ATM (30m / 100ft)'
+        }
+    },
+    {
         id: 'maserati-chrono',
         title: 'Maserati Racing Chrono',
         subtitle: 'Sport Chrono Edition',
@@ -147,6 +165,78 @@ const WATCH_DATABASE = [
             glass: 'Hardened Mineral Glass',
             strap: 'Blue-Stitched Black Leather',
             water: '10 ATM (100m / 330ft)'
+        }
+    },
+    {
+        id: 'maserati-tridente',
+        title: 'Maserati Tridente GT',
+        subtitle: 'Grand Tourer Edition',
+        brand: 'maserati',
+        category: 'executive',
+        image: 'assets/watch_executive.png',
+        badge: 'Maserati',
+        description: 'A refined grand-tourer expression of the trident. Brushed rose gold case, ivory dial with applied Maserati indices, and a hand-finished cordovan leather strap built for boardroom and boulevard alike.',
+        specs: {
+            case: '42 mm',
+            dial: 'Ivory White',
+            movement: 'Swiss Automatic Caliber M-42',
+            glass: 'Sapphire Crystal',
+            strap: 'Cordovan Leather',
+            water: '5 ATM (50m / 165ft)'
+        }
+    },
+    {
+        id: 'saga-celestial',
+        title: 'SAGA Celestial Chrono',
+        subtitle: 'Designer Chrono Series',
+        brand: 'saga',
+        category: 'chronograph',
+        image: 'assets/watch_classic.png',
+        badge: 'SAGA',
+        description: 'A sculptural chronograph from SAGA. Twin subdials orbit a starlit guilloche dial, framed by a rhodium-finished case and a tapered steel bracelet polished to a mirror sheen.',
+        specs: {
+            case: '40 mm',
+            dial: 'Starlit Silver Guilloche',
+            movement: 'Swiss Quartz Chronograph',
+            glass: 'Domed Sapphire Crystal',
+            strap: 'Polished Steel Bracelet',
+            water: '5 ATM (50m / 165ft)'
+        }
+    },
+    {
+        id: 'mathey-tissot-edmond',
+        title: 'Mathey Tissot Edmond Sport',
+        subtitle: 'Swiss Sport Series',
+        brand: 'mathey-tissot',
+        category: 'sport',
+        image: 'assets/watch_sport.png',
+        badge: 'Mathey Tissot',
+        description: 'Swiss heritage meets modern athleticism. Lightweight titanium case, anthracite tachymeter bezel, and a perforated rubber strap engineered for ventilation during long pursuits.',
+        specs: {
+            case: '43 mm',
+            dial: 'Anthracite Sunray',
+            movement: 'Swiss Automatic ETA 2892',
+            glass: 'Anti-Reflective Sapphire',
+            strap: 'Perforated Vulcanized Rubber',
+            water: '20 ATM (200m / 660ft)'
+        }
+    },
+    {
+        id: 'onyx-eclipse',
+        title: 'Onyx Eclipse',
+        subtitle: 'Noir Minimalist Series',
+        brand: 'suco',
+        category: 'minimalist',
+        image: 'assets/watch_minimalist.png',
+        badge: 'SU&CO',
+        description: 'A blackened study in restraint. PVD-coated steel, an onyx dial with a single red index at 12, and a stealth Milanese mesh strap. Minimalism with a heartbeat.',
+        specs: {
+            case: '39 mm',
+            dial: 'Onyx Black',
+            movement: 'Swiss Automatic Caliber S-09',
+            glass: 'Flat Sapphire Crystal',
+            strap: 'Black PVD Milanese Mesh',
+            water: '5 ATM (50m / 165ft)'
         }
     }
 ];
@@ -338,9 +428,17 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal();
 
             // Set collection in dropdown
-            const mapped = MODEL_MAPPING[watchId.split('-')[0]] || MODEL_MAPPING[watchId];
-            if (mapped && bookingCollection) {
-                bookingCollection.value = mapped.collectionValue || 'all';
+            if (bookingCollection) {
+                const baseId = watchId.replace('-minimal', 'minimalist').split('-')[0];
+                const mapped = MODEL_MAPPING[baseId] || MODEL_MAPPING[watchId];
+                if (mapped) {
+                    bookingCollection.value = mapped.collectionValue;
+                } else {
+                    if (watchId.startsWith('saga')) bookingCollection.value = 'saga';
+                    else if (watchId === 'mathey-tissot-martin') bookingCollection.value = 'mathey-tissot-martin';
+                    else if (watchId.startsWith('mathey-tissot')) bookingCollection.value = 'mathey-tissot';
+                    else if (watchId.startsWith('maserati')) bookingCollection.value = 'maserati';
+                }
             }
 
             // Smooth scroll to boutique section
@@ -450,6 +548,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     } else {
                         // Fallback for brand watch direct matches
                         if (id.startsWith('saga')) bookingCollection.value = 'saga';
+                        else if (id === 'mathey-tissot-martin') bookingCollection.value = 'mathey-tissot-martin';
                         else if (id.startsWith('mathey-tissot')) bookingCollection.value = 'mathey-tissot';
                         else if (id.startsWith('maserati')) bookingCollection.value = 'maserati';
                     }
