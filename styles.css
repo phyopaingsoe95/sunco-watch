@@ -1333,12 +1333,20 @@ section {
     max-height: 90vh;
     border-radius: 24px;
     overflow-y: auto;
+    overflow-x: hidden;
     position: relative;
     z-index: 10;
     box-shadow: var(--shadow-hard);
     transform: scale(0.9);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     border: 1px solid var(--border-gray);
+    /* Hide scrollbars */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.modal-content::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
 .modal.active .modal-content {
@@ -1755,6 +1763,10 @@ section {
 
     .modal-details-panel {
         padding: 30px;
+    }
+
+    .modal-actions {
+        flex-direction: column;
     }
 
     /* Mobile Menu Toggle */
