@@ -281,7 +281,7 @@ section {
     }
 }
 
-/* --- Header Section --- */
+/* --- Header Section ---- */
 .main-header {
     position: fixed;
     top: 0;
@@ -1341,12 +1341,15 @@ section {
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     border: 1px solid var(--border-gray);
     /* Hide scrollbars */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
 }
 
 .modal-content::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
+    /* Chrome, Safari, Opera */
 }
 
 .modal.active .modal-content {
