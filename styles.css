@@ -976,7 +976,8 @@ section {
 }
 
 .card-img-container {
-    height: 280px;
+    aspect-ratio: 1 / 1;
+    height: auto;
     background: radial-gradient(circle, #F8FAFC 0%, #EDF2F7 100%);
     display: flex;
     justify-content: center;
@@ -1741,8 +1742,15 @@ section {
     }
 
     .modal-image-panel {
-        min-height: 300px;
-        padding: 40px;
+        min-height: auto;
+        aspect-ratio: 1 / 1;
+        padding: 20px;
+    }
+
+    .modal-watch-img {
+        max-height: 80%;
+        width: 100%;
+        object-fit: contain;
     }
 
     .modal-details-panel {
